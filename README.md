@@ -26,6 +26,5 @@ the prerequisites for building modules
 
 #### Note about godot-cpp
 
-The godot-cpp project is not included as a submodule because further update may break the compatibility with the godot
-version you are using. So you should clone the godot-cpp repository and checkout the version you are using.
-There are also some precompiled binaries for linux in there that take a long time to compile.
+Make sure to use godot-cpp from the `4.2` branch, otherwise compatibility might break. The repo is freezed at a specific
+commit and should not be changed. 
