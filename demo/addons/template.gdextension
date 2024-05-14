@@ -1,0 +1,12 @@
+[configuration]
+
+entry_symbol = "template_module_init"
+compatibility_minimum = "4.1"
+
+[libraries]
+
+macos.debug = "res://addons/template/bin/macos/libtemplate.debug.dylib"
+macos.release = "res://addons/template/bin/macos/libtemplate.release.dylib"
+linux.debug.x86_64 = "res://addons/template/bin/x11/libtemplate.debug.so"
+linux.release.x86_64 = "res://addons/template/bin/x11/libtemplate.release.so"
+

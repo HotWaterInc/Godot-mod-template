@@ -32,7 +32,7 @@ set(TARGET_PATH x11)
 set(LIB_EXT ".so")
 
 # Change the output directory to the bin directory
-set(BUILD_PATH ${CMAKE_SOURCE_DIR}/demo/addons/${PROJECT_NAME}/bin/${TARGET_PATH})
+set(BUILD_PATH ${CMAKE_SOURCE_DIR}/demo/addons/${PROJECT_NAME_LOWER_CASE}/bin/${TARGET_PATH})
 set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY "${BUILD_PATH}")
 set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "${BUILD_PATH}")
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY "${BUILD_PATH}")
@@ -143,6 +143,6 @@ endif ()
 
 if (${BUILD_FOR_EDITOR})
     add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-            COMMAND ${CMAKE_COMMAND} -E copy ${BUILD_PATH}/lib${PROJECT_NAME}.release${LIB_EXT} ${BUILD_PATH}/lib${PROJECT_NAME}.debug${LIB_EXT}
+            COMMAND ${CMAKE_COMMAND} -E copy ${BUILD_PATH}/lib${PROJECT_NAME_LOWER_CASE}.release${LIB_EXT} ${BUILD_PATH}/lib${PROJECT_NAME_LOWER_CASE}.debug${LIB_EXT}
     )
 endif ()
