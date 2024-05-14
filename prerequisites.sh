@@ -1,0 +1,1 @@
+# Installs the prerequisites for the project
